@@ -1,0 +1,52 @@
+[
+    {
+        "name": "test dcnm module",
+        "hosts": "localhost",
+        "vars": {
+            "api_info": {
+                "baseurl": "https://10.1.53.220/rest",
+                "username": "admin",
+                "password": "C1sc0123",
+                "verify": false
+            }
+        },
+        "tasks": [
+            {
+                "name": "dcnm_facts",
+                "dcnm_facts": {
+                    "baseurl": "https://10.1.53.220/rest",
+                    "username": "admin",
+                    "password": "C1sc0123",
+                    "verify": false
+                }
+            },
+            {
+                "name": "output fabrics",
+                "debug": {
+                    "msg": "Fabric name: {{ item.fabricName }}"
+                },
+                "loop": "{{ ansible_facts.dcnm_fabrics }}"
+            },
+            {
+                "name": "create/update VRF",
+                "dcnm_vrf": {
+                    "baseurl": "https://10.1.53.220/rest",
+                    "username": "admin",
+                    "password": "C1sc0123",
+                    "verify": false,
+                    "fabric_name": "Demo1",
+                    "vrf_name": "MyVRF_50002",
+                    "vrf_template_config": {
+                        "nveId": "1",
+                        "vrfVlanId": "3",
+                        "asn": "65001",
+                        "vrfName": "MyVRF_50002",
+                        "vrfSegmentId": "50002"
+                    },
+                    "vrf_id": 50002,
+                    "state": "present"
+                }
+            }
+        ]
+    }
+]

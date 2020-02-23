@@ -1,0 +1,5 @@
+api_info:
+  baseurl: https://10.1.53.220/rest
+  password: C1sc0123
+  username: admin
+  verify: false
