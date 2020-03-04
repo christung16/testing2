@@ -40,7 +40,6 @@ print (prettyxml)
 todict=xmltodict.parse(prettyxml)
 print (json.dumps(todict,indent=4))
 
-
 print (todict)
 
 

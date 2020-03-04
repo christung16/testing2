@@ -1,0 +1,23 @@
+{
+    "address": [
+        {
+            "city": "North Point",
+            "postal_code": 44663,
+            "primary": 1,
+            "state": "OH",
+            "street": "94873 Ledner Rue"
+        },
+        {
+            "city": "North Point",
+            "postal_code": 17319,
+            "primary": 0,
+            "state": "EL",
+            "street": "832 William Ave"
+        }
+    ],
+    "birth_date": "1979-08-15",
+    "first_name": "John",
+    "id": 3242,
+    "last_name": "Smith",
+    "score": 18.3
+}

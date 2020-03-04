@@ -1,0 +1,13 @@
+<allxml>
+    <network:table xmlns:network="cisco.com">
+        <network:tr>
+            <network:td> router </network:td>
+            <network:td> switch </network:td>
+        </network:tr>
+    </network:table>
+
+    <drink:table xmlns:drink="resturant.com">
+        <drink:name1>Coffee </drink:name1>
+        <drink:name2>Tea </drink:name2>
+    </drink:table>
+</allxml>
